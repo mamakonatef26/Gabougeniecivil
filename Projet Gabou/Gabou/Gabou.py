@@ -85,7 +85,7 @@ st.markdown("""
             Gabou<br>
             <span class="hero-highlight">Génie Civil</span>
         </h1>
-        <p class="hero-quote">NOUS BÂTISSONS VOS AMBITIONS</p>
+        <p class="hero-quote">We build your dreams</p>
         <p style="font-size: 18px; max-width: 600px; opacity: 0.9;">
             Études et réalisations en génie civil et VRD (Voirie et Réseau Divers). 
             Une expertise solide pour transformer vos visions en infrastructures durables.
