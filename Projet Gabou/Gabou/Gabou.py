@@ -25,9 +25,9 @@ st.markdown("""
         border-bottom: 2px solid #FFFFFF;
     }
 
-    /* Cadre principal bleu nuit avec effet 3D */
+    /* Bannière principale avec effet 3D */
     .hero-section {
-        background: linear-gradient(145deg, #0A0F2C, #1B1F3B);
+        background: linear-gradient(145deg, #0A0F2C, #1B1F3B); /* Bleu nuit dégradé */
         padding: 40px 50px;
         color: white;
         border-radius: 12px;
@@ -42,10 +42,10 @@ st.markdown("""
         line-height: 1.0;
         margin-bottom: 15px;
         text-shadow: 
-            2px 2px 4px rgba(0,0,0,0.8),
-            0 0 10px #FFFFFF,
-            0 0 20px #FFFFFF,
-            0 0 30px #1E90FF;
+            2px 2px 4px rgba(0,0,0,0.8),   /* ombre noire douce */
+            0 0 10px #FFFFFF,              /* halo blanc */
+            0 0 20px #FFFFFF,              /* brillance plus forte */
+            0 0 30px #1E90FF;              /* éclat bleu clair pour effet moderne */
     }
 
     .hero-highlight {
@@ -65,26 +65,6 @@ st.markdown("""
         padding-left: 15px;
         margin-bottom: 20px;
         text-transform: uppercase;
-    }
-
-    /* Sous-section À propos intégrée dans le cadre */
-    .about-inline {
-        margin-top: 30px;
-        padding: 20px;
-        background: rgba(255,255,255,0.05);
-        border-radius: 10px;
-        box-shadow: inset 0 0 10px rgba(255,255,255,0.1);
-    }
-    .about-inline h2 {
-        font-size: 26px;
-        font-weight: 700;
-        margin-bottom: 15px;
-        text-shadow: 0 0 8px #FFFFFF;
-    }
-    .about-inline p {
-        font-size: 16px;
-        line-height: 1.6;
-        opacity: 0.95;
     }
 
     /* Bouton WhatsApp flottant */
@@ -107,9 +87,9 @@ st.markdown("""
     </div>
     """, unsafe_allow_html=True)
 
-# --- BANNIÈRE D'ACCUEIL + À PROPOS intégrée ---
+# --- BANNIÈRE D'ACCUEIL ---
 st.markdown("""
-    <div class="hero-section" id="a-propos">
+    <div class="hero-section">
         <p class="hero-top-text">ENTREPRISE PRIVÉE — DAKAR, SÉNÉGAL</p>
         <h1 class="hero-main-title">
             Gabou<br>
@@ -120,19 +100,6 @@ st.markdown("""
             Études et réalisations en génie civil et VRD (Voirie et Réseau Divers). 
             Une expertise solide pour transformer vos visions en infrastructures durables.
         </p>
-
-        <div class="about-inline">
-            <h2>À Propos de Gabou Génie Civil</h2>
-            <p>
-            Fondée en 2026 par Monsieur <strong>Abdoulaye Faty</strong>, Gabou Génie Civil est le fruit d'une ambition portée par l'excellence technique et la rigueur académique du <strong>CEDT G15</strong> (Centre d’Entrepreneuriat et de Développement Technique).
-            </p>
-            <p>
-            Géomaticien de formation, le fondateur a souhaité allier la précision des technologies cartographiques et spatiales aux enjeux majeurs du génie civil et de l'assainissement urbain. Cette approche innovante permet à l'entreprise d'offrir des solutions d'ingénierie d'une précision chirurgicale, adaptées aux réalités du terrain.
-            </p>
-            <p>
-            Basée à <strong>Guédiawaye</strong>, au cœur de la région de Dakar, Gabou Génie Civil se positionne comme un partenaire stratégique pour la conception, le suivi et la réalisation d'infrastructures durables. Qu'il s'agisse de projets de bâtiment ou de réseaux de voirie et d'assainissement (VRD), l'entreprise s'engage à bâtir l'avenir du Sénégal avec intégrité et professionnalisme.
-            </p>
-        </div>
     </div>
     """, unsafe_allow_html=True)
 
