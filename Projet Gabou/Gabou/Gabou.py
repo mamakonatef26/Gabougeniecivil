@@ -77,6 +77,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # --- BANNIÈRE D'ACCUEIL (Style CEDT) ---
+# --- BANNIÈRE D'ACCUEIL (Mise à jour avec vos nouveaux textes) ---
 st.markdown("""
     <div class="hero-section">
         <p class="hero-top-text">ENTREPRISE PRIVÉE — DAKAR, SÉNÉGAL</p>
@@ -84,10 +85,10 @@ st.markdown("""
             Gabou<br>
             Génie <span class="hero-highlight">Civil</span>
         </h1>
-        <p class="hero-quote">« CONSTRUIRE AVEC RIGUEUR ET PASSION »</p>
+        <p class="hero-quote">« NOUS BÂTISSONS VOS AMBITIONS »</p>
         <p style="font-size: 18px; max-width: 600px; opacity: 0.9;">
-            Expertise en BTP, assainissement et études techniques. 
-            Nous transformons vos visions en infrastructures durables.
+            Études et réalisations en génie civil et VRD (Voirie et Réseau Divers). 
+            Une expertise solide pour transformer vos visions en infrastructures durables.
         </p>
     </div>
     """, unsafe_allow_html=True)
