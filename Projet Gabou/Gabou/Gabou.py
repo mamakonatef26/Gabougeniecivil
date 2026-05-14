@@ -30,10 +30,10 @@ st.markdown("""
         background: linear-gradient(145deg, #0A0F2C, #1B1F3B); /* Bleu nuit dégradé */
         padding: 40px 50px;
         color: white;
-        border-radius: 12px; /* arrondi pour effet moderne */
+        border-radius: 12px;
         margin-bottom: 20px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.8), inset 0 0 15px rgba(255,255,255,0.1); /* effet 3D + brillance interne */
-        border: 1px solid rgba(255,255,255,0.2); /* léger contour lumineux */
+        box-shadow: 0 8px 20px rgba(0,0,0,0.8), inset 0 0 15px rgba(255,255,255,0.1);
+        border: 1px solid rgba(255,255,255,0.2);
     }
     
     .hero-main-title {
@@ -41,12 +41,20 @@ st.markdown("""
         font-weight: 800;
         line-height: 1.0;
         margin-bottom: 15px;
-        text-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #CCCCCC; /* effet de brillance */
+        text-shadow: 
+            2px 2px 4px rgba(0,0,0,0.8),   /* ombre noire douce */
+            0 0 10px #FFFFFF,              /* halo blanc */
+            0 0 20px #FFFFFF,              /* brillance plus forte */
+            0 0 30px #1E90FF;              /* éclat bleu clair pour effet moderne */
     }
 
     .hero-highlight {
         color: #FFFFFF;
-        text-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #CCCCCC;
+        text-shadow: 
+            2px 2px 4px rgba(0,0,0,0.8),
+            0 0 10px #FFFFFF,
+            0 0 20px #FFFFFF,
+            0 0 30px #1E90FF;
     }
 
     .hero-quote {
