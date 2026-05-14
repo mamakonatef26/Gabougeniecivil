@@ -25,35 +25,30 @@ st.markdown("""
         border-bottom: 2px solid #FF4B2B;
     }
 
-    /* Bannière principale (Hero Section) */
+    //* Bannière principale affinée */
     .hero-section {
-        background-color: #3D1F16; /* Fond Chocolat */
-        padding: 80px 50px;
+        background-color: #3D1F16; 
+        padding: 40px 50px; /* Réduit de 80px à 40px pour un cadre moins haut */
         color: white;
         border-radius: 0px;
-        margin-bottom: 40px;
-    }
-    .hero-top-text {
-        color: #FF4B2B; /* Orange pour le sur-titre */
-        letter-spacing: 2px;
-        font-weight: bold;
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-    .hero-main-title {
-        font-size: 60px;
-        font-weight: 800;
-        line-height: 1.1;
         margin-bottom: 20px;
     }
-    .hero-highlight {
-        color: #FF4B2B;
+    
+    .hero-main-title {
+        font-size: 50px; /* Légèrement réduit pour gagner de l'espace */
+        font-weight: 800;
+        line-height: 1.0;
+        margin-bottom: 15px;
     }
+
     .hero-quote {
-        font-style: italic;
+        font-size: 16px;
+        font-weight: bold;
+        color: #FF4B2B;
         border-left: 3px solid #FF4B2B;
         padding-left: 15px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
     }
 
     /* Bouton WhatsApp flottant (en bas à droite) */
