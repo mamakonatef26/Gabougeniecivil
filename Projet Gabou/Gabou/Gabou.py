@@ -3,10 +3,10 @@ import streamlit as st
 # Configuration de la page
 st.set_page_config(page_title="Gabou Génie Civil", page_icon="🏗️", layout="wide")
 
-# CSS complet pour l'alignement et le style final
+# CSS : Remplacement du Orange par Bleu Nuit (#1A237E)
 st.markdown("""
     <style>
-    /* Menu de navigation aligné à droite */
+    /* Menu de navigation */
     .nav-container {
         display: flex;
         justify-content: flex-end;
@@ -15,16 +15,16 @@ st.markdown("""
     }
     .nav-link {
         text-decoration: none;
-        color: #FFFFFF; /* Blanc pour ressortir sur le fond sombre */
+        color: #FFFFFF;
         font-weight: 500;
         font-size: 16px;
     }
     .nav-link:hover {
-        color: #1A237E;
-        border-bottom: 2px solid #FF4B2B;
+        color: #1A237E; /* Bleu Nuit au survol */
+        border-bottom: 2px solid #1A237E;
     }
 
-    /* Bannière principale */
+    /* Bannière principale Chocolat */
     .hero-section {
         background-color: #3D1F16; 
         padding: 40px 50px;
@@ -34,9 +34,12 @@ st.markdown("""
     }
     .hero-top-text { color: #FFFFFF !important; letter-spacing: 2px; font-weight: bold; font-size: 14px; text-transform: uppercase; }
     .hero-main-title { font-size: 50px; font-weight: 800; line-height: 1.0; margin: 15px 0; }
+    
+    /* Barre verticale en Bleu Nuit */
     .hero-quote {
         font-size: 16px; font-weight: bold; color: #FFFFFF !important;
-        border-left: 3px solid #FFFFFF !important; padding-left: 15px;
+        border-left: 3px solid #1A237E !important; /* Changement ici */
+        padding-left: 15px;
         margin-bottom: 20px; text-transform: uppercase;
     }
 
@@ -56,7 +59,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# --- NAVIGATION (Tous les liens sont ici) ---
+# --- NAVIGATION ---
 st.markdown("""
     <div class="nav-container">
         <a class="nav-link" href="#">Accueil</a>
@@ -84,7 +87,7 @@ st.markdown("<div id='a-propos' class='content-section'>", unsafe_allow_html=Tru
 st.header("À propos")
 st.write("""
 Gabou Génie Civil est une entreprise sénégalaise dédiée à l'excellence dans le secteur du bâtiment et des travaux publics. 
-Forts de notre expertise technique, nous accompagnons nos clients de la conception à la réalisation de leurs projets les plus ambitieux.
+Basés à Guédiawaye, nous accompagnons nos clients de la conception à la réalisation de leurs projets.
 """)
 st.markdown("</div>", unsafe_allow_html=True)
 
@@ -93,10 +96,10 @@ st.markdown("<div id='nos-services' class='content-section'>", unsafe_allow_html
 st.header("Nos Services")
 col1, col2 = st.columns(2)
 with col1:
-    st.markdown("### 🏗️ Génie Civil")
+    st.markdown("<h3 style='color: #1A237E;'>🏗️ Génie Civil</h3>", unsafe_allow_html=True)
     st.write("Construction de bâtiments, gros œuvre et structures complexes.")
 with col2:
-    st.markdown("### 💧 VRD & Assainissement")
+    st.markdown("<h3 style='color: #1A237E;'>💧 VRD & Assainissement</h3>", unsafe_allow_html=True)
     st.write("Aménagement de voiries et gestion des réseaux de fluides.")
 st.markdown("</div>", unsafe_allow_html=True)
 
