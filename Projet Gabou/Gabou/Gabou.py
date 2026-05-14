@@ -3,7 +3,7 @@ import streamlit as st
 # Configuration de la page
 st.set_page_config(page_title="Gabou Génie Civil", page_icon="🏗️", layout="wide")
 
-# CSS pour imiter le style du CEDT (image_79a338.png)
+# CSS mis à jour : Tout en Blanc sur Chocolat
 st.markdown("""
     <style>
     /* Menu de navigation en haut à droite */
@@ -21,37 +21,52 @@ st.markdown("""
         font-size: 16px;
     }
     .nav-link:hover {
-        color: #FF4B2B;
+        color: #FF4B2B; /* On garde une touche d'orange au survol pour l'interactivité */
         border-bottom: 2px solid #FF4B2B;
     }
 
-    //* Bannière principale affinée */
+    /* Bannière principale affinée */
     .hero-section {
         background-color: #3D1F16; 
-        padding: 40px 50px; /* Réduit de 80px à 40px pour un cadre moins haut */
+        padding: 40px 50px;
         color: white;
         border-radius: 0px;
         margin-bottom: 20px;
     }
     
+    /* Texte du haut en BLANC */
+    .hero-top-text {
+        color: #FFFFFF !important;
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
     .hero-main-title {
-        font-size: 50px; /* Légèrement réduit pour gagner de l'espace */
+        font-size: 50px;
         font-weight: 800;
         line-height: 1.0;
         margin-bottom: 15px;
     }
 
+    /* Le mot Civil en BLANC */
+    .hero-highlight {
+        color: #FFFFFF !important;
+    }
+
+    /* Slogan et barre latérale en BLANC */
     .hero-quote {
         font-size: 16px;
         font-weight: bold;
-        color: #FF4B2B;
-        border-left: 3px solid #FF4B2B;
+        color: #FFFFFF !important;
+        border-left: 3px solid #FFFFFF !important;
         padding-left: 15px;
         margin-bottom: 20px;
         text-transform: uppercase;
     }
 
-    /* Bouton WhatsApp flottant (en bas à droite) */
+    /* Bouton WhatsApp flottant */
     .whatsapp-float {
         position: fixed;
         bottom: 20px;
@@ -71,8 +86,7 @@ st.markdown("""
     </div>
     """, unsafe_allow_html=True)
 
-# --- BANNIÈRE D'ACCUEIL (Style CEDT) ---
-# --- BANNIÈRE D'ACCUEIL (Mise à jour sans guillemets) ---
+# --- BANNIÈRE D'ACCUEIL ---
 st.markdown("""
     <div class="hero-section">
         <p class="hero-top-text">ENTREPRISE PRIVÉE — DAKAR, SÉNÉGAL</p>
@@ -106,7 +120,7 @@ st.divider()
 st.subheader("Nous contacter")
 st.write("📞 +221 77 058 33 45 | 📧 gabougc2026@gmail.com")
 
-# Bouton WhatsApp (Style icône flottante comme sur l'image)
+# Bouton WhatsApp flottant
 st.markdown("""
     <div class="whatsapp-float">
         <a href="https://wa.me/221770583345" target="_blank">
