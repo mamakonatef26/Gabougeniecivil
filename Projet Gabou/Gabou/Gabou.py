@@ -20,7 +20,7 @@ st.markdown("""
         font-size: 16px;
     }
     .nav-link:hover {
-        color: #FF4B2B;
+        color: #1A237E;
         border-bottom: 2px solid #FF4B2B;
     }
 
