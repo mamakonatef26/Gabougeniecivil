@@ -27,7 +27,7 @@ st.markdown("""
 
     /* Bannière principale */
     .hero-section {
-        background-color: #3D1F16; 
+        background: linear-gradient(135deg, #0A0F2C, #1B1F3B); /* Bleu nuit dégradé */
         padding: 40px 50px;
         color: white;
         border-radius: 0px;
