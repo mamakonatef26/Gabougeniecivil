@@ -3,10 +3,15 @@ import streamlit as st
 # Configuration de la page
 st.set_page_config(page_title="Gabou Génie Civil", page_icon="🏗️", layout="wide")
 
-# CSS : Nettoyage total du orange pour du BLEU NUIT
+# CSS : Correction totale pour la lisibilité sur fond sombre
 st.markdown("""
     <style>
-    /* 1. Barre de navigation */
+    /* Global : Fond noir et texte blanc */
+    .stApp {
+        background-color: #0E1117;
+    }
+    
+    /* Menu de navigation */
     .nav-container {
         display: flex;
         justify-content: flex-end;
@@ -19,44 +24,51 @@ st.markdown("""
         font-weight: 500;
         font-size: 16px;
     }
-    /* CHANGEMENT : Survol en Bleu Nuit (plus de orange ici) */
     .nav-link:hover {
         color: #1A237E !important;
         border-bottom: 2px solid #1A237E !important;
     }
 
-    /* 2. Bannière principale */
+    /* Bannière principale Chocolat */
     .hero-section {
         background-color: #3D1F16; 
         padding: 40px 50px;
-        color: white;
-        border-radius: 0px;
+        color: white !important;
+        border-radius: 5px;
         margin-bottom: 40px;
     }
-    .hero-top-text { color: #FFFFFF !important; letter-spacing: 2px; font-weight: bold; font-size: 14px; text-transform: uppercase; }
-    .hero-main-title { font-size: 50px; font-weight: 800; line-height: 1.0; margin: 15px 0; color: white !important; }
-    
-    /* CHANGEMENT : Barre du slogan en Bleu Nuit */
+    .hero-main-title { 
+        font-size: 50px; 
+        font-weight: 800; 
+        color: white !important;
+        margin: 10px 0;
+    }
     .hero-quote {
-        font-size: 16px; font-weight: bold; color: #FFFFFF !important;
-        border-left: 4px solid #1A237E !important; 
+        font-size: 16px; 
+        font-weight: bold; 
+        color: white !important;
+        border-left: 4px solid #1A237E !important; /* Barre Bleu Nuit */
         padding-left: 15px;
-        margin-bottom: 20px; text-transform: uppercase;
+        text-transform: uppercase;
     }
 
-    /* 3. Global Streamlit : Supprimer le orange des liens et boutons par défaut */
-    a { color: #1A237E !important; }
-    .stMarkdown h1, .stMarkdown h2, .stMarkdown h3 { color: #3D1F16 !important; }
-    
-    /* Couleur de la ligne de division (divider) */
-    hr { border-top: 1px solid #1A237E !important; }
-
-    .content-section {
-        padding: 20px 50px;
-        color: #3D1F16;
+    /* Forcer tous les titres et textes hors bannière en BLANC */
+    h1, h2, h3, p, span, li {
+        color: #FFFFFF !important;
     }
 
-    /* Bouton WhatsApp */
+    /* Couleur spécifique pour les icônes ou petits accents en Bleu Nuit */
+    .blue-accent {
+        color: #1A237E !important;
+        font-weight: bold;
+    }
+
+    /* Suppression des ancres Streamlit qui apparaissent en orange */
+    .element-container a {
+        color: #1A237E !important;
+    }
+
+    /* Bouton WhatsApp flottant */
     .whatsapp-float {
         position: fixed;
         bottom: 20px;
@@ -76,10 +88,10 @@ st.markdown("""
     </div>
     """, unsafe_allow_html=True)
 
-# --- ACCUEIL ---
+# --- ACCUEIL (Bannière) ---
 st.markdown("""
     <div class="hero-section">
-        <p class="hero-top-text">ENTREPRISE PRIVÉE — DAKAR, SÉNÉGAL</p>
+        <p style="letter-spacing: 2px; font-size: 14px;">ENTREPRISE PRIVÉE — DAKAR, SÉNÉGAL</p>
         <h1 class="hero-main-title">Gabou<br>Génie Civil</h1>
         <p class="hero-quote">NOUS BÂTISSONS VOS AMBITIONS</p>
         <p style="font-size: 18px; max-width: 600px; opacity: 0.9;">
@@ -89,22 +101,31 @@ st.markdown("""
     </div>
     """, unsafe_allow_html=True)
 
-# --- SECTIONS ---
-st.markdown("<div id='a-propos' class='content-section'><h2>À propos</h2><p>Gabou Génie Civil accompagne vos projets de construction avec rigueur et professionnalisme à Dakar et partout au Sénégal.</p></div>", unsafe_allow_html=True)
+# --- SECTION À PROPOS ---
+st.markdown("<div id='a-propos' style='padding: 20px 50px;'>", unsafe_allow_html=True)
+st.header("À propos")
+st.write("Gabou Génie Civil accompagne vos projets de construction avec rigueur et professionnalisme à Dakar et partout au Sénégal.")
+st.markdown("</div>", unsafe_allow_html=True)
 
-st.markdown("<div id='nos-services' class='content-section'><h2>Nos Services</h2>", unsafe_allow_html=True)
+# --- SECTION NOS SERVICES ---
+st.markdown("<div id='nos-services' style='padding: 20px 50px;'>", unsafe_allow_html=True)
+st.header("Nos Services")
 col1, col2 = st.columns(2)
 with col1:
-    st.markdown("<h3 style='color: #1A237E !important;'>🏗️ Bâtiment</h3>", unsafe_allow_html=True)
+    st.markdown("### 🏗️ <span class='blue-accent'>Bâtiment</span>", unsafe_allow_html=True)
     st.write("Conception et réalisation de gros œuvre.")
 with col2:
-    st.markdown("<h3 style='color: #1A237E !important;'>💧 VRD</h3>", unsafe_allow_html=True)
+    st.markdown("### 💧 <span class='blue-accent'>VRD</span>", unsafe_allow_html=True)
     st.write("Assainissement et réseaux divers.")
 st.markdown("</div>", unsafe_allow_html=True)
 
-# --- CONTACT ---
+# --- SECTION CONTACT ---
+st.markdown("<div id='contact' style='padding: 20px 50px;'>", unsafe_allow_html=True)
 st.divider()
-st.markdown("<div id='contact' class='content-section'><h3>Contact</h3><p>📞 +221 77 058 33 45<br>📧 gabougc2026@gmail.com</p></div>", unsafe_allow_html=True)
+st.subheader("Contact")
+st.write("📞 +221 77 058 33 45")
+st.write("📧 gabougc2026@gmail.com")
+st.markdown("</div>", unsafe_allow_html=True)
 
 # WhatsApp
 st.markdown("""
