@@ -3,156 +3,86 @@ import streamlit as st
 # Configuration de la page
 st.set_page_config(page_title="Gabou Génie Civil", page_icon="🏗️", layout="wide")
 
-# CSS : Design épuré et professionnel (Inspiration CEDT G15)
-st.markdown("""
+# Couleurs personnalisées : Chocolat (#3D1F16) et Orange (#FF4B2B)
+st.markdown(f"""
     <style>
-    /* Global : Fond blanc pur */
-    .stApp {
-        background-color: #FFFFFF !important;
-    }
-
-    /* En-tête / Navigation */
-    .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 8%;
-        background: #FFFFFF;
-        border-bottom: 2px solid #F0F2F6;
-    }
-    .logo {
-        font-size: 24px;
-        font-weight: 900;
-        color: #1A237E; /* Bleu Nuit */
-        text-transform: uppercase;
-    }
-    .nav-items a {
-        text-decoration: none;
-        color: #3D1F16 !important; /* Chocolat */
-        margin-left: 30px;
-        font-weight: 600;
-        font-size: 14px;
-    }
-
-    /* Hero Section : Plus élégante, moins massive */
-    .hero-wrap {
-        padding: 60px 8%;
-        background-color: #3D1F16; /* Chocolat */
-        color: white !important;
-        border-radius: 0 0 50px 0; /* Arrondi moderne */
-    }
-    .hero-title {
-        font-size: 48px;
-        font-weight: 800;
-        margin-bottom: 10px;
-        color: white !important;
-    }
-    .hero-sub {
-        font-size: 20px;
-        border-left: 4px solid #1A237E; /* Accent Bleu Nuit */
-        padding-left: 20px;
-        opacity: 0.9;
-        color: white !important;
-    }
-
-    /* Section Titres */
-    .section-title {
-        color: #1A237E !important;
-        font-size: 28px;
-        font-weight: 700;
-        margin: 40px 0 20px 0;
-        border-bottom: 3px solid #3D1F16;
-        display: inline-block;
-    }
-
-    /* Cards pour les Services */
-    .service-card {
-        background: #F8F9FA;
-        padding: 25px;
-        border-radius: 10px;
-        border-top: 5px solid #1A237E;
-        height: 100%;
-    }
-
-    /* Texte global */
-    p, li, div {
-        color: #2C3E50 !important;
-    }
-    
-    /* WhatsApp */
-    .wa-float {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        z-index: 100;
-    }
+    .stApp {{ background-color: #FFFFFF; }}
+    .main-title {{ color: #3D1F16; font-size: 45px; font-weight: bold; text-align: center; margin-bottom: 0px; }}
+    .sub-title {{ color: #FF4B2B; font-size: 22px; text-align: center; margin-bottom: 30px; font-style: italic; }}
+    .service-card {{ 
+        background-color: #3D1F16; padding: 25px; border-radius: 15px; 
+        color: white; text-align: center; height: 250px; border-bottom: 5px solid #FF4B2B;
+    }}
+    .contact-box {{
+        background-color: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 5px solid #3D1F16;
+    }}
     </style>
     """, unsafe_allow_html=True)
 
 # --- HEADER ---
-st.markdown("""
-    <div class="header-container">
-        <div class="logo">Gabou GC</div>
-        <div class="nav-items">
-            <a href="#">ACCUEIL</a>
-            <a href="#propos">À PROPOS</a>
-            <a href="#services">SERVICES</a>
-            <a href="#contact">CONTACT</a>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-# --- HERO ---
-st.markdown("""
-    <div class="hero-wrap">
-        <h1 class="hero-title">Gabou Génie Civil</h1>
-        <p class="hero-sub">L'expertise technique et la rigueur du CEDT G15 au service de vos infrastructures.</p>
-    </div>
-    """, unsafe_allow_html=True)
-
-# --- CONTENU ---
-st.markdown("<div style='padding: 0 8%;'>", unsafe_allow_html=True)
-
-# À PROPOS
-st.markdown("<div id='propos' class='section-title'>À Propos</div>", unsafe_allow_html=True)
-st.write("""
-Bureau d'études et de réalisation basé à Dakar, nous sommes spécialisés dans le **Génie Civil** et les **VRD**. 
-Notre mission est de garantir la pérennité de vos ouvrages grâce à un suivi rigoureux et des solutions innovantes.
-""")
-
-# SERVICES
-st.markdown("<div id='services' class='section-title'>Nos Services</div>", unsafe_allow_html=True)
-col1, col2 = st.columns(2)
-
+col1, col2 = st.columns([1, 4])
 with col1:
-    st.markdown("""
-        <div class="service-card">
-            <h3 style="color:#1A237E;">🏗️ Bâtiment</h3>
-            <p>Conception, calcul de structures et réalisation de projets immobiliers complexes.</p>
-        </div>
-    """, unsafe_allow_html=True)
-
+    # Affiche une icône de remplacement ou votre logo si le fichier est présent
+    st.write("## 🏗️ GGC") 
 with col2:
-    st.markdown("""
-        <div class="service-card">
-            <h3 style="color:#1A237E;">💧 VRD & Assainissement</h3>
-            <p>Études de voiries et dimensionnement des réseaux de drainage et d'évacuation.</p>
-        </div>
-    """, unsafe_allow_html=True)
+    st.markdown("<h1 class='main-title'>GABOU GÉNIE CIVIL</h1>", unsafe_allow_html=True)
+    st.markdown("<p class='sub-title'>Expertise technique & Solutions durables</p>", unsafe_allow_html=True)
 
-# CONTACT
-st.markdown("<div id='contact' class='section-title'>Contact</div>", unsafe_allow_html=True)
-st.markdown("### 📞 **+221 77 058 33 45**")
-st.markdown("### 📧 **gabougc2026@gmail.com**")
-st.write("📍 Guédiawaye, Dakar, Sénégal")
+st.divider()
 
-st.markdown("</div>", unsafe_allow_html=True)
+# --- SERVICES ---
+st.header("Nos Domaines d'Expertise")
+s1, s2, s3 = st.columns(3)
 
-# WHATSAPP
-st.markdown("""
-    <div class="wa-float">
-        <a href="https://wa.me/221770583345" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="60">
+with s1:
+    st.markdown("""<div class='service-card'>
+    <h3>🚧 BTP & Gros Œuvre</h3>
+    <p>Conception et construction de bâtiments solides répondant aux normes internationales de sécurité.</p>
+    </div>""", unsafe_allow_html=True)
+with s2:
+    st.markdown("""<div class='service-card'>
+    <h3>💧 Assainissement & VRD</h3>
+    <p>Spécialiste des réseaux d'évacuation, gestion des eaux et aménagement des voies de circulation.</p>
+    </div>""", unsafe_allow_html=True)
+with s3:
+    st.markdown("""<div class='service-card'>
+    <h3>📏 Bureau d'Études</h3>
+    <p>Études techniques approfondies, topographie de précision et suivi rigoureux de vos chantiers.</p>
+    </div>""", unsafe_allow_html=True)
+
+st.write("") 
+
+# --- SECTION CONTACT & INFOS ---
+st.divider()
+c1, c2 = st.columns(2)
+
+with c1:
+    st.subheader("📍 Coordonnées de l'entreprise")
+    st.markdown(f"""
+    <div class='contact-box'>
+        <p><strong>📞 Téléphone :</strong> +221 33 814 48 30 / +221 77 058 33 45</p>
+        <p><strong>📧 Email :</strong> gabougc2026@gmail.com</p>
+        <p><strong>🏢 Siège :</strong> Dakar, Sénégal</p>
+        <hr>
+        <a href="https://maps.google.com/?q=Dakar" target="_blank" style="color: #FF4B2B; text-decoration: none; font-weight: bold;">
+            📍 Voir la localisation sur Google Maps
         </a>
     </div>
     """, unsafe_allow_html=True)
+
+with c2:
+    st.subheader("🚀 Lancez votre projet")
+    type_p = st.selectbox("Type de travaux", ["Construction", "Assainissement", "Étude technique", "Rénovation"])
+    
+    # Lien WhatsApp automatique
+    num_wa = "221770583345" 
+    msg = f"Bonjour Gabou Génie Civil, je vous contacte depuis votre site pour un projet de {type_p}."
+    lien_wa = f"https://wa.me/{num_wa}?text={msg.replace(' ', '%20')}"
+    
+    st.markdown(f'''
+        <a href="{lien_wa}" target="_blank">
+            <button style="background-color: #FF4B2B; color: white; border: none; padding: 15px 25px; border-radius: 8px; cursor: pointer; width: 100%; font-size: 18px; font-weight: bold;">
+                Discuter sur WhatsApp 💬
+            </button>
+        </a>
+    ''', unsafe_allow_html=True)
