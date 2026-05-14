@@ -93,17 +93,7 @@ st.markdown("""
     </div>
     """, unsafe_allow_html=True)
 
-# --- DOMAINES D'EXPERTISE ---
-st.markdown("<div id='services'></div>", unsafe_allow_html=True)
-st.header("Nos Domaines d'Expertise")
 
-col1, col2, col3 = st.columns(3)
-with col1:
-    st.info("🏗️ **BTP & Gros Œuvre**")
-with col2:
-    st.info("💧 **Assainissement**")
-with col3:
-    st.info("📐 **Bureau d'Études**")
 
 # --- CONTACT & WHATSAPP ---
 st.markdown("<div id='contact'></div>", unsafe_allow_html=True)
