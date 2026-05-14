@@ -25,13 +25,15 @@ st.markdown("""
         border-bottom: 2px solid #FFFFFF;
     }
 
-    /* Bannière principale */
+    /* Bannière principale avec effet 3D */
     .hero-section {
-        background: linear-gradient(135deg, #0A0F2C, #1B1F3B); /* Bleu nuit dégradé */
+        background: linear-gradient(145deg, #0A0F2C, #1B1F3B); /* Bleu nuit dégradé */
         padding: 40px 50px;
         color: white;
-        border-radius: 0px;
+        border-radius: 12px; /* arrondi pour effet moderne */
         margin-bottom: 20px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.8), inset 0 0 15px rgba(255,255,255,0.1); /* effet 3D + brillance interne */
+        border: 1px solid rgba(255,255,255,0.2); /* léger contour lumineux */
     }
     
     .hero-main-title {
@@ -92,8 +94,6 @@ st.markdown("""
         </p>
     </div>
     """, unsafe_allow_html=True)
-
-
 
 # --- CONTACT & WHATSAPP ---
 st.markdown("<div id='contact'></div>", unsafe_allow_html=True)
