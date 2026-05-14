@@ -3,24 +3,28 @@ import streamlit as st
 # Configuration de la page
 st.set_page_config(page_title="Gabou Génie Civil", page_icon="🏗️", layout="wide")
 
-# CSS pour un look minimaliste (Inspiré par image_792b16.png)
+# CSS complet pour l'alignement et le style final
 st.markdown("""
     <style>
-    /* Menu de navigation */
+    /* Menu de navigation aligné à droite */
     .nav-container {
         display: flex;
         justify-content: flex-end;
-        gap: 25px;
+        gap: 20px;
         padding: 20px;
     }
     .nav-link {
         text-decoration: none;
-        color: #3D1F16;
+        color: #FFFFFF; /* Blanc pour ressortir sur le fond sombre */
         font-weight: 500;
         font-size: 16px;
     }
+    .nav-link:hover {
+        color: #FF4B2B;
+        border-bottom: 2px solid #FF4B2B;
+    }
 
-    /* Bannière principale (Couleur Chocolat) */
+    /* Bannière principale */
     .hero-section {
         background-color: #3D1F16; 
         padding: 40px 50px;
@@ -28,31 +32,18 @@ st.markdown("""
         border-radius: 0px;
         margin-bottom: 40px;
     }
-    .hero-top-text {
-        color: #FFFFFF !important;
-        letter-spacing: 2px;
-        font-weight: bold;
-        font-size: 14px;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-    }
-    .hero-main-title {
-        font-size: 50px;
-        font-weight: 800;
-        line-height: 1.0;
-        margin-bottom: 15px;
-    }
-    .hero-highlight {
-        color: #FFFFFF !important;
-    }
+    .hero-top-text { color: #FFFFFF !important; letter-spacing: 2px; font-weight: bold; font-size: 14px; text-transform: uppercase; }
+    .hero-main-title { font-size: 50px; font-weight: 800; line-height: 1.0; margin: 15px 0; }
     .hero-quote {
-        font-size: 16px;
-        font-weight: bold;
-        color: #FFFFFF !important;
-        border-left: 3px solid #FFFFFF !important;
-        padding-left: 15px;
-        margin-bottom: 20px;
-        text-transform: uppercase;
+        font-size: 16px; font-weight: bold; color: #FFFFFF !important;
+        border-left: 3px solid #FFFFFF !important; padding-left: 15px;
+        margin-bottom: 20px; text-transform: uppercase;
+    }
+
+    /* Style des sections de contenu */
+    .content-section {
+        padding: 40px 50px;
+        color: #3D1F16;
     }
 
     /* Bouton WhatsApp flottant */
@@ -65,22 +56,21 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# --- NAVIGATION ---
+# --- NAVIGATION (Tous les liens sont ici) ---
 st.markdown("""
     <div class="nav-container">
         <a class="nav-link" href="#">Accueil</a>
+        <a class="nav-link" href="#a-propos">À propos</a>
+        <a class="nav-link" href="#nos-services">Nos Services</a>
         <a class="nav-link" href="#contact">Contact</a>
     </div>
     """, unsafe_allow_html=True)
 
-# --- BANNIÈRE D'ACCUEIL ---
+# --- ACCUEIL (Bannière) ---
 st.markdown("""
     <div class="hero-section">
         <p class="hero-top-text">ENTREPRISE PRIVÉE — DAKAR, SÉNÉGAL</p>
-        <h1 class="hero-main-title">
-            Gabou<br>
-            Génie <span class="hero-highlight">Civil</span>
-        </h1>
+        <h1 class="hero-main-title">Gabou<br>Génie Civil</h1>
         <p class="hero-quote">NOUS BÂTISSONS VOS AMBITIONS</p>
         <p style="font-size: 18px; max-width: 600px; opacity: 0.9;">
             Études et réalisations en génie civil et VRD (Voirie et Réseau Divers). 
@@ -89,13 +79,36 @@ st.markdown("""
     </div>
     """, unsafe_allow_html=True)
 
-# --- SECTION CONTACT (Directement après la bannière) ---
-st.markdown("<div id='contact'></div>", unsafe_allow_html=True)
+# --- SECTION À PROPOS ---
+st.markdown("<div id='a-propos' class='content-section'>", unsafe_allow_html=True)
+st.header("À propos")
+st.write("""
+Gabou Génie Civil est une entreprise sénégalaise dédiée à l'excellence dans le secteur du bâtiment et des travaux publics. 
+Forts de notre expertise technique, nous accompagnons nos clients de la conception à la réalisation de leurs projets les plus ambitieux.
+""")
+st.markdown("</div>", unsafe_allow_html=True)
+
+# --- SECTION NOS SERVICES ---
+st.markdown("<div id='nos-services' class='content-section'>", unsafe_allow_html=True)
+st.header("Nos Services")
+col1, col2 = st.columns(2)
+with col1:
+    st.markdown("### 🏗️ Génie Civil")
+    st.write("Construction de bâtiments, gros œuvre et structures complexes.")
+with col2:
+    st.markdown("### 💧 VRD & Assainissement")
+    st.write("Aménagement de voiries et gestion des réseaux de fluides.")
+st.markdown("</div>", unsafe_allow_html=True)
+
+# --- SECTION CONTACT ---
 st.divider()
+st.markdown("<div id='contact' class='content-section'>", unsafe_allow_html=True)
 st.subheader("Nous contacter")
 st.write("📞 +221 77 058 33 45 | 📧 gabougc2026@gmail.com")
+st.write("📍 Dakar, Sénégal")
+st.markdown("</div>", unsafe_allow_html=True)
 
-# Bouton WhatsApp Flottant
+# Bouton WhatsApp flottant
 st.markdown("""
     <div class="whatsapp-float">
         <a href="https://wa.me/221770583345" target="_blank">
